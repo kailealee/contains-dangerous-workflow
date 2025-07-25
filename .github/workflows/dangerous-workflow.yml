@@ -1,0 +1,9 @@
+on:
+  pull_request_target:
+
+jobs:
+  get-pwned:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log event and get pwned
+        run: echo '${{ toJSON(github.event) }}' | jq
