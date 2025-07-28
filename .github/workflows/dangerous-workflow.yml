@@ -6,4 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log event and get pwned
-        run: echo '${{ toJSON(pull_request\.head\.ref) }}' | jq
+        run: echo '${{ github.event.pull_request.head.label }}'
+
